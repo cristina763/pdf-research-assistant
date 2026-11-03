@@ -1,12 +1,5 @@
 # PDF Research Assistant
 
-## 回答與來源的分工
-
-一般問答的主要回答是模型依來源撰寫的分析；引用 ID 由後端依 `support` 加入。完整原文、表格及數值排序放在可展開的 Supporting Evidence，不會自動取代回答。
-
-API 以 `answer.answer_markdown` 回傳回答、`answer.citations` 回傳回答的來源標記，`sources` 提供原文，`supporting_evidence` 提供完整數值與比較，`supporting_tables` 保留原始表格。`answer_integrity` 記錄模型段落與保留段落數。空白、只有證據或未完成的生成會明確拒絕，不會以表格補成成功回答。有效 Answer 不會因 Citation 或補充表格處理失敗而消失；引用問題列警示，無效補充資料隔離，回答文字保留。來源能對應或回答完整保留，都不代表已通過語意正確性驗收。
-
-
 可在 Windows 11 本機執行的 PDF 文件問答網站。上傳 PDF 後，系統使用 BM25 檢索文件證據，再由文字 LLM 生成答案並顯示來源與頁碼；全文摘要採用 Map／Reduce。
 
 ## 環境需求

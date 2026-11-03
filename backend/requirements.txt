@@ -1,0 +1,9 @@
+fastapi==0.162.0
+uvicorn==0.54.0
+python-multipart==0.0.33
+docling==2.145.0
+docling-core==2.105.0
+numpy==2.5.4
+jsonschema==4.26.0
+httpx==0.28.1
+python-dotenv==1.2.4
